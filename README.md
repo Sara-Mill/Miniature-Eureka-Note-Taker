@@ -3,9 +3,7 @@ This project creates a professional note taker using Node.js and Express.js
 
 A video on the instructions and functionality can be found here: 
 
-## Project Title
-Miniature-Eureka-Note-Taker
-License
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Table of Contents
   * [Description](#description)
