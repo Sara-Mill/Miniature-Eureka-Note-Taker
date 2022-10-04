@@ -39,6 +39,6 @@ Fork the repo, and then code
 
 
 ## Questions
-This app can be found on my github page at (https://github.com/Sara-Mill). Sara-Mill
+This app can be found on my github page at _Visit my [GitHub](https://github.com/Sara-Mill/)_<br>
 
-If you have any questions or need to contact me about this app, I can be reached on Github or by email at smilligan0183@gmail.com
+If you have any questions or need to contact me about this app, I can be reached on Github or by <a href='mailto:smilligan0183@gmail.com'></i>My Email</a>_
