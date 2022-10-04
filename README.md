@@ -5,7 +5,7 @@ A video on the instructions and functionality can be found here:
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Table of Contents
+# Table of Contents
   * [Description](#description)
   * [Usage](#usage)
   * [Installation](#installation)
@@ -14,31 +14,31 @@ A video on the instructions and functionality can be found here:
   * [Contributing to this Repo](#contributing)
   * [Questions / Contact Details](#questions)
 
-# Description
+## Description
 Creates a professional note taking app
 
 
-# Usage
+## Usage
 Must use Inquirer package
 
 
-# Installation
+## Installation
 NPM install
 
 
-# Test
+## Test
 Jest
 
 
-# License
+## License
 The application is covered under a Apache 2.0 license.
 
 
-# Contributing
+## Contributing
 Fork the repo, and then code
 
 
-# Questions
+## Questions
 This app can be found on my github page at (https://github.com/Sara-Mill). Sara-Mill
 
 If you have any questions or need to contact me about this app, I can be reached on Github or by email at smilligan0183@gmail.com
