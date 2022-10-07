@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const htmlRoutes = require('./routes/htmlRoutes');
-const apiRoutes = require('./routes/notes');
+const apiRoutes = require('./routes/apiRoutes');
 
 
 const app = express();
@@ -21,7 +21,7 @@ app.use('/', htmlRoutes);
 
 //Get route for html homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './publicindex.html'))
+    res.sendFile(path.join(__dirname, './public/index.html'))
 });
 
 //Get route for notes html page
