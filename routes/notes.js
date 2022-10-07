@@ -3,45 +3,44 @@ const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 const fs = require('fs')
 const noteshtml = require('../public/index')
+const db = require('../db/notes.json');
 
+let id = db.length + 1;
 
-// GET Route for retrieving all the notes
-notes.get('/notes', (req, res) => {
-  readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
-});
+      // GET Route for retrieving all the notes
+      notes.get('/notes', (req, res) => {
+      res.json(db)
+      });
 
-// POST Route for a new note
-notes.post('/notes', (req, res) => {
-  console.log(req.body);
+      // POST Route for adding a new note
+      notes.post('/notes', (req, res) => {
+        console.log(req.body);
 
-  const { title, text } = req.body;
+        req.body.id = id++;
+        console.log(req.body);
 
-  if (req.body) {
-    const newNote = {
-      title,
-      text,
-      note_id: uuid(),
-    };
-    fs.readFile('./db/notes.json', 'utf8', function (err, data){
-      var jsondata = JSON.parse(data)
+        db.push(req.body);
+        fs.writeFile('./db/notes.json', JSON.stringify(db), function (err) {
+          if (err) throw err;
+          res.json(db);
+        });
+      });
 
-      jsondata.push(req.body)
-     fs.writeFile('./db/notes.json', JSON.stringify(jsondata), function(err){if (err) throw err}
-     );
-    });
-    
-    //fs.writeFile(newNote, JSON.stringify(newNote))
-    
-    // readAndAppend('./db/notes.json', function (err, newNote) {
-    //   const json = JSON.parse(req.body)
-    //   json.push('newNote' + newNote)
+      //Delete a note based on specific id
+      notes.delete('/notes/:id', function (req, res) {
+        let id = parseInt(req.params.id);
 
-      //fs.writeFile("results.json", JSON.stringify(json))
-    // });
-    res.json(`Note added successfully 🚀`);
-  } else {
-    res.error('Error in adding note');
-  }
-});
+        for (let i =0; i <db.length; i ++) {
+          if (db[i].id === id) {
+            db.splice(i, 1);
+          }
+        }
+        console.log(db);
 
+        fs.writeFile('./db/notes.json', JSON.stringify(db), function (err) {
+          if (err) throw err;
+          res.json(db);
+        });
+      });
+   
 module.exports = notes;
