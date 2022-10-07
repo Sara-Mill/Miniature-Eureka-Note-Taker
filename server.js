@@ -21,7 +21,7 @@ app.use('/', htmlRoutes);
 
 //get route for html homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'))
+    res.sendFile(path.join(__dirname, './publicindex.html'))
 });
 
 //get route for notes html page
