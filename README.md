@@ -19,11 +19,11 @@ Creates a professional note taking app
 
 
 ## Usage
-Must use Inquirer package
+Please use well
 
 
 ## Installation
-NPM install
+NPM install express and path
 
 
 ## Test
@@ -31,7 +31,7 @@ Jest
 
 
 ## License
-The application is covered under a Apache 2.0 license.
+The application is covered under an Apache 2.0 license.
 
 
 ## Contributing
