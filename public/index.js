@@ -1,7 +1,7 @@
 const notes = require("../routes/notes");
 
-const noteForm = document.getElementById('note-title');
-const notesContainer = document.getElementById('note-container');
+//const noteForm = document.getElementById('noteTitle');
+//const notesContainer = document.getElementById('note-container');
 
 const createCard = (note) => {
   // Create card
@@ -29,66 +29,66 @@ const createCard = (note) => {
   cardEl.appendChild(cardHeaderEl);
   cardEl.appendChild(cardBodyEl);
 
-  // Append the card element to the tips container in the DOM
+  // Append the card element to the notes container in the DOM
   notesContainer.appendChild(cardEl);
 };
 
-// Get a list of existing tips from the server
-const getNotes = () =>
-  fetch('/api/notes', {
-    method: 'GET', // or 'PUT'
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    // body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => data)
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+// Get a list of existing notes from the server
+// const getNotes = () =>
+//   fetch('/api/notes', {
+//     method: 'GET', // or 'PUT'
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     // body: JSON.stringify(data),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => data)
+//     .catch((error) => {
+//       console.error('Error:', error);
+//     });
 
-// Post a new tip to the page
-const postNote = (note) =>
-  fetch('/api/notes', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(note),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      alert(data);
-      createCard(note);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+// Post a new note to the page
+// const postNote = (note) =>
+//   fetch('/api/notes', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(note),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       alert(data);
+//       createCard(note);
+//     })
+//     .catch((error) => {
+//       console.error('Error:', error);
+//     });
 
-// When the page loads, get all the tips
-getNotes().then((data) => data.forEach((note) => createCard(note)));
+// // When the page loads, get all the notes
+// getNotes().then((data) => data.forEach((note) => createCard(note)));
 
-// Function to handle when a user submits the feedback form
-const handleFormSubmit = (e) => {
-  e.preventDefault();
-  console.log('Form submit invoked');
+// // Function to handle when a user submits the feedback form
+// const handleFormSubmit = (e) => {
+//   e.preventDefault();
+//   console.log('Form submit invoked');
 
-  // Get the value of the tip and save it to a variable
-  const noteText = document.getElementById('note-textarea').value;
+//   // Get the value of the tip and save it to a variable
+//   const noteText = document.getElementById('note-textarea').value;
 
-  // get the value of the username and save it to a variable
-  const noteTitle = document.getElementById('note-title').value.trim();
+//   // get the value of the username and save it to a variable
+//   const noteTitle = document.getElementById('noteTitle').value.trim();
 
-  // Create an object with the tip and username
-  const newNote = {
-    Title: noteTitle,
-    text: noteText,
-  };
+//   // Create an object with the tip and username
+//   const newNote = {
+//     Title: noteTitle,
+//     text: noteText,
+//   };
 
-  // Make a fetch POST request to the server
-  postNote(newNote);
-};
+//   // Make a fetch POST request to the server
+//   postNote(newNote);
+// };
 
-// Listen for when the form is submitted
-noteForm.addEventListener('submit', handleFormSubmit);
+// // Listen for when the form is submitted
+// noteForm.addEventListener('submit', handleFormSubmit);
