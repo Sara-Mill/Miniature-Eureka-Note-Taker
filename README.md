@@ -44,5 +44,5 @@ This app can be found on my github page at _Visit my [GitHub](https://github.com
 
 If you have any questions or need to contact me about this app, I can be reached on Github or by <a href='mailto:smilligan0183@gmail.com'></i>My Email</a>_
 
-##Preview of app
+## Preview of app
  ![ Preview of site](https://user-images.githubusercontent.com/106774866/194763509-f562ff57-c821-4f79-b65d-c2b864b423af.png)
