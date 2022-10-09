@@ -1,6 +1,8 @@
 # Miniature-Eureka-Note-Taker
 This project creates a professional note taker using Node.js and Express.js
 
+The deployed application is here: https://miniature-eureka-note-taker.herokuapp.com/
+
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
